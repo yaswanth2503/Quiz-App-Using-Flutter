@@ -15,15 +15,18 @@ class QuestionWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.centerLeft,
-      child: Text(
-        'Question ${indexAction+1}/$totalQuestions :$question',
-         style : const TextStyle(
-          fontSize: 24.0,
-          color: Colors.black,
-         )
+    return Padding(
+      padding: const EdgeInsets.all(14.0), // Adjust the padding as needed
+      child: Container(
+        alignment: Alignment.centerLeft,
+        child: Text(
+          'Question ${indexAction + 1}/$totalQuestions: $question',
+          style: const TextStyle(
+            fontSize: 24.0,
+            color: Colors.white,
+          ),
+        ),
       ),
-    ); // Removed const from Placeholder()
+    );
   }
 }

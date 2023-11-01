@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import '../constants.dart';
 
@@ -6,11 +7,11 @@ class ResultBox extends StatelessWidget {
     Key? key,
     required this.result,
     required this.questionLength,
-    required this.onPressed,////////////////////
+    required this.onPressed,
     }):super(key: key);
   final int result;
   final int questionLength;
-  final VoidCallback onPressed;////////////////////////
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +31,7 @@ class ResultBox extends StatelessWidget {
             CircleAvatar(
               child: Text(
                 '$result/$questionLength',
-                style: TextStyle(fontSize: 30.0),
+                style: const TextStyle(fontSize: 30.0),////////////////
                 ),
                 radius: 70.0,
                 backgroundColor: result ==questionLength/2 ?
@@ -38,19 +39,19 @@ class ResultBox extends StatelessWidget {
                 ),
                 const SizedBox(height: 20.0),
                 Text(
-                  result == questionLength /2 ? 'Almost There'
+                  result == questionLength /2 ? 'Almost There' 
                   : result < questionLength/2 ? 'Try Again' : 'Great',
                   style: const TextStyle(color:Colors.white),
                 ),
-                const SizedBox(height: 25.0), ///////////////////////////
+                const SizedBox(height: 25.0), 
                 GestureDetector(
                   onTap : onPressed,
                   child: const Text(
                     'Start Over',
                     style: TextStyle(
-                      color: Colors.black,
+                      color: Colors.white,
                       fontSize: 20.0,
-                      letterSpacing: 1.0,////////////////////////
+                      letterSpacing: 1.0,
                     ),
                   ),
                 )

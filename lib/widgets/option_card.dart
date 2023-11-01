@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../constants.dart';
 
-class OpticalCard extends StatelessWidget {
-  const OpticalCard({Key? key,
+class OptionCard extends StatelessWidget {
+  const OptionCard({Key? key,
   required this.option,
   required this.color,
   }):super(key: key);
@@ -10,7 +10,7 @@ class OpticalCard extends StatelessWidget {
   final Color color;
   @override
   Widget build(BuildContext context) {
-    return Card(   ///////////////////////////  
+    return Card(
       child: Card(
         color: color,
         child :ListTile(
@@ -19,7 +19,7 @@ class OpticalCard extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 22.0,
-              color: color.red != color.green ? neutral : Colors.black, /////////////////////////////
+              color: color.red != color.green ? neutral : Colors.black,
             ),
           ),
         )
